@@ -154,9 +154,9 @@ jobs:
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         if [ "${{ inputs.BUILD_TARGET }}" != "pbrp" ]; then
-            lunch ${{ env.DEVICE_MAKEFILE }}-eng && mka ${{ inputs.BUILD_TARGET }}image
+            lunch twrp_blossom-eng && mka ${{ inputs.BUILD_TARGET }}image
         else
-            lunch ${{ env.DEVICE_MAKEFILE }}-eng && mka ${{ inputs.BUILD_TARGET }}
+            lunch twrp_blossom-eng && mka ${{ inputs.BUILD_TARGET }}
         fi
         popd
 
